@@ -48,3 +48,27 @@ const title = 'Juegos';
 document.querySelector('header').outerHTML = createHeader(title);
 
 tttGame();
+
+function isWinner(posPlayer = '') {
+  const optionWinner = ['123', '456', '789', '147', '258', '369', '159', '357'];
+
+  for (let index = 0; index < optionWinner.length; index++) {
+    const item = optionWinner[index];
+    if (
+      posPlayer.includes(item.at(0)) &&
+      posPlayer.includes(item.at(1)) &&
+      posPlayer.includes(item.at(2))
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
+// document.querySelector('header').innerHTML = createHeader(title);
+// document.querySelector('header').outerHTML = createHeader(title);
+// document.querySelector('header').insertAdjacentHTML ('afterBegin',title);
+
+console.log(isWinner('1789')); //True
+console.log(isWinner('12468')); //fase
+console.log(isWinner('321')); //True
+console.log(isWinner('12469')); //fase
