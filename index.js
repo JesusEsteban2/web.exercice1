@@ -52,6 +52,8 @@ tttGame();
 function isWinner(posPlayer = '') {
   const optionWinner = ['123', '456', '789', '147', '258', '369', '159', '357'];
 
+  if (posPlayer.length < 3) return false;
+
   for (let index = 0; index < optionWinner.length; index++) {
     const item = optionWinner[index];
     if (
@@ -64,6 +66,7 @@ function isWinner(posPlayer = '') {
   }
   return false;
 }
+
 // document.querySelector('header').innerHTML = createHeader(title);
 // document.querySelector('header').outerHTML = createHeader(title);
 // document.querySelector('header').insertAdjacentHTML ('afterBegin',title);
