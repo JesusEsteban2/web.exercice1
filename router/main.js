@@ -2,6 +2,10 @@ import { loadAbout } from './about.js';
 import { loadPorfolio } from './porfolio.js';
 
 function render(selector, position, template) {
+  const validPositions = ['afterbegin', 'afterend', 'beforebegin', 'beforeend'];
+
+  if (!validPositions.includes(position)) return;
+
   const target = document[selector];
 
   target.insertAdjacentHTML(position, template);
