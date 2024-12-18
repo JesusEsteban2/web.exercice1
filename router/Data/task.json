@@ -1,26 +1,29 @@
-[   
+[
     {
-        "id": "9be8f6ca", 
+        "id": "9be8f6ca",
         "title": "Diseño en Figma de la guía de estilos",
         "owner": "Pepe",
-        "isDone": false
-    }
+        "isDone": true
+    },
+
     {
         "id": "f6a2f704",
         "title": "Creación de HTML",
         "owner": "Ernestina",
         "isDone": false
-    }
+    },
+
     {
         "id": "d70ae82f",
         "title": "Creación de CSS",
         "owner": "Ernestina",
         "isDone": false
-    }
+    },
+
     {
         "id": "b56f06b2",
         "title": "Creación de Javascript",
         "owner": "Pepe",
-        "isDone": false
+        "isDone": true
     }
 ]

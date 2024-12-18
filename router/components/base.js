@@ -9,8 +9,9 @@ export function render(selector, position, template) {
     if (!validPositions.includes(position)) {
         return;
     }
+
     const target = document.querySelector(selector);
-    console.log(selector, position);
+
     target.insertAdjacentHTML(position, template);
     const getElementOptions = {
         beforeend: target.lastElementChild,

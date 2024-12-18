@@ -1,0 +1,11 @@
+header {
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+}
