@@ -82,6 +82,15 @@ function deleteCard (task) {
         render(selector,position,template)
         //const element = extendedRender();
     }
+<<<<<<< HEAD
+=======
+        
+    function deleteCard(task) {
+            console.log(task.id);
+            const index = tasks.findIndex((item) => item.id === task.id);
+            tasks.splice(index, 1);
+    }
+>>>>>>> 2ab0af5ab929ccb6277e8683e5d3b705edacbf1c
     
     function updateCard(updatedTask) {
             const id = updatedTask.id;
@@ -97,14 +106,45 @@ function deleteCard (task) {
             tasks.push(task);
     }
     
-    function extendedRender() {
-            document.querySelector(selector).innerHTML = '';
+    function createAddTask(
+        addTask,
+        selector = 'body',
+        position = 'beforeend'
+    ) {
+        const template = /*html*/ `
+         <form>
+            <label>
+              <span>Título</span>
+              <input type="text" name="title" required>
+            </label>
+            <label>
+              <span>Responsable</span>
+              <input type="text" name="owner">
+            </label>
+            <button type="submit">Crear</button>
+          </form>
+        
+        `;
+        
+        const element = render(selector, position, template);
+        element.addEventListener('submit', handleSubmit);
     
-            const element = render(selector, position, template);
-            tasks.forEach((task) =>
-                createCard(task, deleteCard, 'ul.cards', 'beforeend')
-            );
-            return element;
+        return element;
+
     }
-      
+
+    function handleSubmit(event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData);
+        const newTask = {
+            ...data,
+            id: crypto.randomUUID().split('-')[0],
+            isDone: false,
+        };
+        console.log(newTask);
+        addTask(newTask);
+    }
+
 }
