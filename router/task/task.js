@@ -123,6 +123,7 @@ export function loadTask() {
         event.preventDefault();
 
         const formData = new FormData(event.target);
+        console.dir(formData.entries())
         const data = Object.fromEntries(formData);
         const newTask = {
             ...data,
