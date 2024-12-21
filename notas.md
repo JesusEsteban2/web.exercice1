@@ -42,3 +42,23 @@
 // const headerElement = document.querySelector('header');
 // console.dir(headerElement.querySelectorAll('img'));
 // }
+
+# API REST
+
+http (Metodos) -> datos (Crud)
+
+jsonplaceholder (https://jsonplaceholder.typicode.com/)
+
+Instalar json-server
+
+1. Crear carpeta en el proyecto (json-server)
+2. instalar (npm install json-server)
+3. Crear archivo de ejemplo con algún dato de prueba (db.json)
+4. ejecutar servidor ($ npx json-server db.json)
+
+Extension VSC (Thunder Client) para manejo de HTML y json
+
+C->Post
+R->Get
+U->Put/Patch
+D->Delete
